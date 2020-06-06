@@ -1,0 +1,18 @@
+Hash: 1077bf989fc04fe5ccff
+Version: webpack 4.43.0
+Time: 1642ms
+Built at: 2020-06-06 20:26:08
+               Asset       Size  Chunks                   Chunk Names
+        ./index.html  209 bytes          [emitted]        
+    index-bundles.js    343 KiB    main  [emitted]        main
+index-bundles.js.map    373 KiB    main  [emitted] [dev]  main
+Entrypoint main = index-bundles.js index-bundles.js.map
+[./logfile.txt] 18 bytes {main} [built]
+[./src/main.frag] 1.35 KiB {main} [built]
+[./src/main.js] 18 KiB {main} [built]
+[./src/main.vert] 513 bytes {main} [built]
+    + 12 hidden modules
+Child HtmlWebpackCompiler:
+     1 asset
+    Entrypoint HtmlWebpackPlugin_0 = __child-HtmlWebpackPlugin_0
+    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 253 bytes {HtmlWebpackPlugin_0} [built]

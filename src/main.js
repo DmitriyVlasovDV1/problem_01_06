@@ -1,6 +1,7 @@
 import { mat4, vec3 } from 'gl-matrix';
-import * as dat from 'dat.gui'
+import * as dat from 'dat.gui';
 
+import gitHash from '../logfile.txt';
 import vxShaderStr from './main.vert';
 import fsShaderStr from './main.frag';
 
@@ -48,6 +49,7 @@ class ClassAnimation {
   /* Listeners methods */
 
   handleMouseWeel(event) {
+      console.log("git rev-parse HEAD");
   }
 
   handleMouseMove(event) {
@@ -324,6 +326,9 @@ function mainFunction() {
   controller3.onChange(function(value){
     Mandelbrot.timeSpeed = value;
   });
+
+  alert(gitHash.split("\n")[0]);
+  alert(gitHash.split("\n")[3]);
 
   /* Listners */
   document.addEventListener('keydown', Mandelbrot.handleKeyDown);
