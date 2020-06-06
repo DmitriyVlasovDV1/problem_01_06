@@ -3,7 +3,7 @@ import * as dat from 'dat.gui';
 
 import './styles.css';
 
-import gitHash from '../logfile.txt';
+import gitHash from './logfile.txt';
 import vxShaderStr from './main.vert';
 import fsShaderStr from './main.frag';
 
