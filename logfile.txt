@@ -1,18 +1,26 @@
-Hash: 1077bf989fc04fe5ccff
+Hash: 30eb21393015f32ffe62
 Version: webpack 4.43.0
-Time: 1642ms
-Built at: 2020-06-06 20:26:08
+Time: 2145ms
+Built at: 2020-06-06 22:22:04
                Asset       Size  Chunks                   Chunk Names
-        ./index.html  209 bytes          [emitted]        
-    index-bundles.js    343 KiB    main  [emitted]        main
+        ./index.html  275 bytes          [emitted]        
+    index-bundles.js    344 KiB    main  [emitted]        main
 index-bundles.js.map    373 KiB    main  [emitted] [dev]  main
-Entrypoint main = index-bundles.js index-bundles.js.map
+            main.css    237 KiB    main  [emitted]        main
+        main.css.map    237 KiB    main  [emitted] [dev]  main
+Entrypoint main = main.css index-bundles.js main.css.map index-bundles.js.map
 [./logfile.txt] 18 bytes {main} [built]
 [./src/main.frag] 1.35 KiB {main} [built]
 [./src/main.js] 18 KiB {main} [built]
 [./src/main.vert] 513 bytes {main} [built]
-    + 12 hidden modules
+[./src/styles.css] 39 bytes {main} [built]
+    + 13 hidden modules
 Child HtmlWebpackCompiler:
      1 asset
     Entrypoint HtmlWebpackPlugin_0 = __child-HtmlWebpackPlugin_0
-    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 253 bytes {HtmlWebpackPlugin_0} [built]
+    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html] 284 bytes {HtmlWebpackPlugin_0} [built]
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!src/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js!./src/styles.css] 662 bytes {mini-css-extract-plugin} [built]
+    [./src/images/background_space.jpg] 237 KiB {mini-css-extract-plugin} [built]
+        + 2 hidden modules

@@ -1,6 +1,8 @@
 import { mat4, vec3 } from 'gl-matrix';
 import * as dat from 'dat.gui';
 
+import './styles.css';
+
 import gitHash from '../logfile.txt';
 import vxShaderStr from './main.vert';
 import fsShaderStr from './main.frag';
@@ -305,7 +307,7 @@ function mainFunction() {
   Mandelbrot.initGL();
   Mandelbrot.initShaders();
   Mandelbrot.initBuffers();
-  Mandelbrot.initTexture("images/cat.png", "images/cat2.png", "images/background_space.jpg");
+  Mandelbrot.initTexture("src/images/cat.png", "src/images/cat2.png", "src/images/background_space.jpg");
 
   Mandelbrot.gl.clearColor(0.0, 0.0, 0.0, 1.0);
   Mandelbrot.gl.enable(Mandelbrot.gl.DEPTH_TEST);
@@ -327,10 +329,17 @@ function mainFunction() {
     Mandelbrot.timeSpeed = value;
   });
 
-  alert(gitHash.split("\n")[0]);
-  alert(gitHash.split("\n")[3]);
+  //alert(gitHash.split("\n")[0]);
+  //alert(gitHash.split("\n")[3]);
 
   /* Listners */
+
+  document.getElementById("idGitHash").innerHTML = gitHash.split("\n")[0];
+  document.getElementById("idLastUpdate").innerHTML = gitHash.split("\n")[3];
+  
+
+  gitHash.split("\n")[3]
+
   document.addEventListener('keydown', Mandelbrot.handleKeyDown);
   document.addEventListener('keyup', Mandelbrot.handleKeyUp);
   Mandelbrot.canvas.addEventListener('mouseup', Mandelbrot.handleMouseUp);

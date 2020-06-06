@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -11,6 +12,13 @@ module.exports = {
   devtool: 'source-map',
   module: {
     rules: [
+      {
+          test: /\.css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader'
+          ]
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -31,6 +39,10 @@ module.exports = {
             loader: 'html-loader'
           }
         ]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }
     ]
   },
@@ -39,6 +51,8 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
       // favicon: './src/favicon.ico'
-    })
+    }),
+    new MiniCssExtractPlugin(
+    )
   ]
 };

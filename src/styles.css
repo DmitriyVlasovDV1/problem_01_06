@@ -1,0 +1,12 @@
+.classBody {
+  background-image: linear-gradient(green, yellow, purple);
+}
+
+.classText {
+  text-shadow: 2px 2px lightslategray;
+  color: white;
+  font-size: 20px;
+  text-indent: 50px;
+}
+
+
